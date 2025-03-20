@@ -49,7 +49,7 @@ const Chat = () => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.room.trim()) return;
 
-    const ws = new WebSocket("ws://localhost:8080");
+    const ws = new WebSocket("https://chat-app-ddy0.onrender.com");
 
     ws.onmessage = (event) => {
       const messageData = JSON.parse(event.data);
